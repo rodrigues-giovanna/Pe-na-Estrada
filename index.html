@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pé na Estrada - Sistema de Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Pé na Estrada</div>
+        <nav>
+            <a href="#proximas-viagens">Próximas Viagens</a>
+            <a href="#quem-somos">Quem Somos</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="barra-lateral">
+            <div class="bloco-info-compacto">
+                ⚡ Confirmação imediata • 🛡 Vaga garantida por 24h • 📧 Bilhete no e-mail
+            </div>
+        </div>
+
+        <section class="conteudo-principal" id="proximas-viagens">
+            <h2>Reserve Sua Próxima Excursão</h2>
+            <p class="subtitulo">Garanta sua vaga instantaneamente preenchendo os dados abaixo.</p>
+
+            <main class="grade-destinos">
+
+                <!-- GRAMADO -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-gramado"></div>
+                    <span class="tag-status">Vagas Limitadas</span>
+                    <h3>Fim de Semana em Gramado (RS)</h3>
+                    <p class="data">📅 22 a 25 de Abril 2027</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-gramado">5</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-gramado" class="form-reserva" onsubmit="realizarReserva(event, 'gramado')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-gramado" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+
+                <!-- ARRAIAL DO CABO -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-arraial"></div>
+                    <span class="tag-status">Últimas Vagas</span>
+                    <h3>Bate e Volta Arraial do Cabo (RJ)</h3>
+                    <p class="data">📅 15 de Novembro</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-arraial">2</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-arraial" class="form-reserva" onsubmit="realizarReserva(event, 'arraial')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-arraial" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+
+                <!-- BÚZIOS -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-buzios"></div>
+                    <span class="tag-status">Vagas Limitadas</span>
+                    <h3>Fim de Semana em Búzios (RJ)</h3>
+                    <p class="data">📅 27 a 29 de Novembro</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-buzios">8</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-buzios" class="form-reserva" onsubmit="realizarReserva(event, 'buzios')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-buzios" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+
+                <!-- LENÇÓIS MARANHENSES -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-lencois"></div>
+                    <span class="tag-status">Vagas Limitadas</span>
+                    <h3>Fim de Semana nos Lençóis Maranhenses (MA)</h3>
+                    <p class="data">📅 17 a 25 de Julho 2027</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-lencois">9</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-lencois" class="form-reserva" onsubmit="realizarReserva(event, 'lencois')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-lencois" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+
+                <!-- FERNANDO DE NORONHA -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-noronha"></div>
+                    <span class="tag-status">Vagas Limitadas</span>
+                    <h3>Fim de Semana em Fernando de Noronha (PE)</h3>
+                    <p class="data">📅 05 a 10 de Fevereiro</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-noronha">5</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-noronha" class="form-reserva" onsubmit="realizarReserva(event, 'noronha')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-noronha" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+
+                <!-- FOZ DO IGUAÇU -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-foz"></div>
+                    <span class="tag-status">Vagas Limitadas</span>
+                    <h3>Fim de Semana em Foz do Iguaçu (PR)</h3>
+                    <p class="data">📅 27 a 30 de Maio 2027</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-foz">10</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-foz" class="form-reserva" onsubmit="realizarReserva(event, 'foz')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-foz" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+
+                <!-- SALVADOR -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-salvador"></div>
+                    <span class="tag-status">Vagas Limitadas</span>
+                    <h3>Fim de Semana em Salvador (BA)</h3>
+                    <p class="data">📅 04 a 07 de Setembro 2027</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-salvador">5</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-salvador" class="form-reserva" onsubmit="realizarReserva(event, 'salvador')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-salvador" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+
+                <!-- IBITIPOCA -->
+                <div class="cartao-viagem">
+                    <div class="banner-viagem bg-ibitipoca"></div>
+                    <span class="tag-status">Vagas Limitadas</span>
+                    <h3>Fim de Semana em Ibitipoca (MG)</h3>
+                    <p class="data">📅 11 a 13 de Dezembro</p>
+                    <div class="painel-vagas">
+                        <span class="numero-vagas" id="vagas-num-ibitipoca">5</span>
+                        <p>vagas restantes</p>
+                    </div>
+                    <form id="form-ibitipoca" class="form-reserva" onsubmit="realizarReserva(event, 'ibitipoca')">
+                        <input type="text" class="input-reserva" placeholder="Seu Nome" required>
+                        <input type="email" class="input-reserva" placeholder="Seu E-mail" required>
+                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                    <div id="sucesso-ibitipoca" class="mensagem-sucesso">
+                        <h3>🎉 Reserva Confirmada!</h3>
+                        <p>Enviamos os detalhes do bilhete para o seu e-mail.</p>
+                    </div>
+                </div>
+            </main>
+
+                        <section class="secao-sobre" id="quem-somos">
+            <h2>Quem Somos</h2>
+            <p>Somos uma agência apaixonada por conectar pessoas a destinos inesquecíveis. Organizamos excursões completas com total segurança, conforto e guias especializados para você se preocupar apenas em curtir a viagem.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Pé na Estrada Excursões Ltda.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

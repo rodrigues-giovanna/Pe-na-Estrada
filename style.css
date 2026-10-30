@@ -1,0 +1,292 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #0f172a; /* Azul escuro profundo */
+    color: #f8fafc; /* Texto claro */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Suaviza a rolagem ao clicar no link */
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    background-color: #1e293b; /* Azul ardósia */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8; /* Azul brilhante */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: #38bdf8;
+}
+
+/* ==========================================================================
+   3. ESTRUTURA DO LAYOUT PRINCIPAL
+   ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+}
+
+.conteudo-principal {
+    width: 100%;
+}
+
+.conteudo-principal h2 {
+    font-size: 28px;
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+/* Barra de Avisos Superior Compacta */
+.barra-lateral {
+    width: 100%;
+}
+
+.bloco-info-compacto {
+    background-color: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   4. GRADE DE DESTINOS E CARTÕES (CARDS)
+   ========================================================================== */
+.grade-destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.cartao-viagem {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 16px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+/* Área das Imagens de Fundo */
+.banner-viagem {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-color: #334155; 
+    border-bottom: 1px solid #334155;
+}
+
+/* Alinhamento do conteúdo interno do card */
+.cartao-viagem h3, 
+.cartao-viagem .data, 
+.cartao-viagem .painel-vagas, 
+.cartao-viagem .form-reserva, 
+.cartao-viagem .mensagem-sucesso {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tag-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(15, 23, 42, 0.85);
+    color: #fb923c;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid rgba(234, 88, 12, 0.4);
+}
+
+.cartao-viagem h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.cartao-viagem .data {
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Painel de Vagas Restantes */
+.painel-vagas {
+    background-color: rgba(16, 163, 74, 0.08);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px dashed rgba(16, 163, 74, 0.3);
+}
+
+.numero-vagas {
+    font-size: 28px;
+    font-weight: 800;
+    color: #4ade80;
+}
+
+.painel-vagas p {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* Formulário de Inscrição */
+.form-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto; /* Empurra o formulário para ficar sempre alinhado na base do card */
+}
+
+.input-reserva {
+    background-color: #0f172a;
+    border: 1px solid #475569;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-reserva:focus { 
+    border-color: #38bdf8; 
+}
+
+.btn-confirmar {
+    background: linear-gradient(90deg, #0284c7 0%, #0369a1 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.btn-confirmar:hover {
+    opacity: 0.9;
+}
+
+/* Caixa de Feedback de Sucesso */
+.mensagem-sucesso {
+    display: none;
+    background-color: rgba(16, 163, 74, 0.15);
+    border: 1px solid #22c55e;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mensagem-sucesso h3 { 
+    color: #4ade80; 
+    font-size: 16px; 
+}
+
+.mensagem-sucesso p { 
+    font-size: 13px; 
+    color: #cbd5e1; 
+}
+
+/* ==========================================================================
+   5. SEÇÃO INSTITUCIONAL (QUEM SOMOS)
+   ========================================================================== */
+.secao-sobre {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 30px;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+.secao-sobre h2 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 13px;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   7. BANCO DE IMAGENS ATIVAS DO PORTAL (SUBSTITUÍDO POR LINKS VÁLIDOS)
+   ========================================================================== */
+.bg-gramado { 
+    background-image: url('Imagens/gramado.jpg'); 
+}
+.bg-arraial { 
+    background-image: url('Imagens/arraial.jpg'); 
+}
+.bg-buzios { 
+    background-image: url('Imagens/buzios.jpg'); 
+}
+.bg-lencois { 
+    background-image: url('Imagens/lencois.jpg'); 
+}
+.bg-noronha { 
+    background-image: url('Imagens/fernando.jpg'); 
+}
+.bg-foz { 
+    background-image: url('Imagens/foz.jpg'); 
+}
+.bg-salvador { 
+    background-image: url('Imagens/salvador.jpg'); 
+}
+.bg-ibitipoca { 
+    background-image: url('Imagens/ibitipoca.jpg'); 
+}
